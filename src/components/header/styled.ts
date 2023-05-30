@@ -20,9 +20,14 @@ export const TagHeader = styled.header`
     display: flex;
     align-items: center;
     gap: 50px;
+  }
+  @media (max-width: 767px) {
+    padding: 10px 15px;
+    justify-content: flex-start;
 
-    svg {
-      cursor: pointer;
+    div {
+      gap: 5px;
+      justify-content: flex-start;
     }
   }
 `;
@@ -32,4 +37,7 @@ export const Logo = styled.a`
   font-weight: 400;
   font-size: 40px;
   line-height: 150%;
+  @media (max-width: 767px) {
+    font-size: 20px;
+  }
 `;

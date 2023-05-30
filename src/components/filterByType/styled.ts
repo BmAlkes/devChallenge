@@ -10,6 +10,10 @@ export const FilterList = styled.ul`
   list-style-type: none;
   gap: 40px;
   cursor: pointer;
+  /* @media (max-width: 767px) {
+    gap: 15px;
+    flex-direction: column;
+  } */
 `;
 
 export const FilterItem = styled.li<FilterItemProps>`
@@ -24,4 +28,7 @@ export const FilterItem = styled.li<FilterItemProps>`
 
   border-bottom: ${(props) =>
     props.selected ? "4px solid var(--orange-low)" : ""};
+  @media (max-width: 767px) {
+    font-size: 14px;
+  }
 `;
