@@ -1,5 +1,5 @@
 import { useLocalStorage } from "@/hooks/useLocalStorage";
-import CartIcon from "../cart-icon";
+import CartIcon from "../Icons/cart-icon";
 import { CartCount, Container } from "./styles";
 
 const CartControl = () => {

@@ -1,5 +1,5 @@
 import { HtmlHTMLAttributes, InputHTMLAttributes } from "react";
-import { SearcIcon } from "../search-icon";
+import { SearcIcon } from "../Icons/search-icon";
 import { PrimaryInput, PrimaryInputSerch } from "./styled";
 
 interface InputProps extends InputHTMLAttributes<HTMLHtmlElement> {}
