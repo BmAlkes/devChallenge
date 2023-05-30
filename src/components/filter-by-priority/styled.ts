@@ -33,6 +33,7 @@ export const PriorityFilter = styled.ul`
   list-style-type: none;
   top: 100%;
   right: 0;
+  z-index: 999;
 
   li {
     padding: 5px 16px;
