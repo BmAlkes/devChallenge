@@ -15,10 +15,18 @@ export const Container = styled.div`
     width: 100%;
     gap: 32px;
     margin-top: 32px;
+    padding: 0 10px;
+
+    @media (max-width: 768px) {
+      flex-direction: column-reverse;
+    }
 
     img {
       max-width: 640px;
       width: 50%;
+      @media (max-width: 768px) {
+        width: 100%;
+      }
     }
     > div {
       display: flex;
