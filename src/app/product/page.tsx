@@ -6,7 +6,11 @@ import { useRouter } from "next/navigation";
 import { useProduct } from "@/hooks/useProduct";
 import CartIcon from "@/components/Icons/cart-icon";
 
-const Product = ({ searchParams }: { searchParams: { id: string } }) => {
+export default function Product({
+  searchParams,
+}: {
+  searchParams: { id: string };
+}) {
   const formatValue = (valueInCents: number) => {
     const valueInDollar = valueInCents / 100;
     return valueInDollar.toLocaleString("en-US", {
@@ -18,7 +22,8 @@ const Product = ({ searchParams }: { searchParams: { id: string } }) => {
   const handleNavigate = () => {
     router.push("/");
   };
-  const { data } = useProduct("d98efc70-c2fc-47e1-9be1-fced643e331b");
+  const { data } = useProduct(searchParams.id);
+  console.log(data);
   return (
     <Container>
       <Backbutton onClick={handleNavigate}>
@@ -48,6 +53,4 @@ const Product = ({ searchParams }: { searchParams: { id: string } }) => {
       </section>
     </Container>
   );
-};
-
-export default Product;
+}

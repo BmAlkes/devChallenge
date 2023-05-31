@@ -18,6 +18,7 @@ const ProductList = (props: ProductListProps) => {
           price={product.price_in_cents}
           image={product.image_url}
           key={product.id}
+          id={product.id}
         />
       ))}
     </ListContainer>

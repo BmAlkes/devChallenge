@@ -14,6 +14,7 @@ export const Container = styled.div`
     justify-content: center;
     width: 100%;
     gap: 32px;
+    margin-top: 32px;
 
     img {
       max-width: 640px;
