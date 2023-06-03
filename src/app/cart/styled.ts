@@ -76,6 +76,19 @@ export const CartResultContainer = styled.div`
     text-transform: uppercase;
     margin-bottom: 30px;
   }
+
+  button {
+    color: white;
+    cursor: pointer;
+    border-radius: 4px;
+    background: #51b853;
+    border: none;
+    height: 34px;
+
+    &:hover {
+      background: #00b000;
+    }
+  }
 `;
 
 export const TotalItem = styled.div`
@@ -88,6 +101,9 @@ export const TotalItem = styled.div`
   line-height: 200%;
   p {
     margin-bottom: 10px;
+  }
+  .total {
+    font-weight: bold;
   }
 `;
 

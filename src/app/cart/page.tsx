@@ -87,6 +87,12 @@ const CartPage = () => {
           <p>{formatValue(4000)}</p>
         </TotalItem>
         <Divider></Divider>
+        <TotalItem>
+          <p className="total">Total:</p>
+          <p>{formatValue(cartTotal + 4000)}</p>
+        </TotalItem>
+
+        <button>Checkout</button>
       </CartResultContainer>
     </Container>
   );
