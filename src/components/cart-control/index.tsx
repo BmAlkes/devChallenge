@@ -2,6 +2,7 @@ import { useLocalStorage } from "@/hooks/useLocalStorage";
 import CartIcon from "../Icons/cart-icon";
 import { CartCount, Container } from "./styles";
 import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 
 const CartControl = () => {
   const router = useRouter();
