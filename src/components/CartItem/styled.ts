@@ -7,11 +7,20 @@ export const Item = styled.li`
   height: 210px;
   border-radius: 8px;
   background-color: white;
+  @media (max-width: 767px) {
+    height: auto;
+    flex-direction: column;
+  }
 
   img {
     max-height: 100%;
     width: 256px;
     border-radius: 8px 0 0 8px;
+    @media (max-width: 767px) {
+      max-width: auto;
+      height: 150px;
+      object-fit: cover;
+    }
   }
   > div {
     display: flex;
@@ -40,6 +49,9 @@ export const Item = styled.li`
       font-weight: 400;
       font-size: 12px;
       line-height: 150%;
+      max-height: 50%;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
     div {
       width: 100%;

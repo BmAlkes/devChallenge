@@ -31,7 +31,10 @@ const CartItem = ({
       <div>
         <div>
           <h4>{product.name}</h4>
-          <button onClick={() => handleDeleteItem(product.id)}>
+          <button
+            onClick={() => handleDeleteItem(product.id)}
+            arial-label="delete"
+          >
             <DeleteIcon />
           </button>
         </div>

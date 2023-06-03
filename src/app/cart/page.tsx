@@ -1,6 +1,14 @@
 "use client";
 import { useRouter } from "next/navigation";
-import { Backbutton, CartList, CartListContainer, Container } from "./styled";
+import {
+  Backbutton,
+  CartList,
+  CartListContainer,
+  CartResultContainer,
+  Container,
+  Divider,
+  TotalItem,
+} from "./styled";
 import BackIcon from "@/components/Icons/backIcon";
 import { useLocalStorage } from "@/hooks/useLocalStorage";
 import { Product, ProductInCart } from "@/@types/products";
@@ -46,11 +54,11 @@ const CartPage = () => {
   };
   return (
     <Container>
-      <Backbutton onClick={handleNavigate}>
-        <BackIcon />
-        Back
-      </Backbutton>
       <CartListContainer>
+        <Backbutton onClick={handleNavigate}>
+          <BackIcon />
+          Back
+        </Backbutton>
         <h3>Your Cart</h3>
         <p>
           Total {value.length} Products <span>{formatValue(cartTotal)}</span>
@@ -68,6 +76,18 @@ const CartPage = () => {
           })}
         </CartList>
       </CartListContainer>
+      <CartResultContainer>
+        <h3> Total Cart</h3>
+        <TotalItem>
+          <p>Subtotal Product</p>
+          <p>{formatValue(cartTotal)}</p>
+        </TotalItem>
+        <TotalItem>
+          <p>Deliver</p>
+          <p>{formatValue(4000)}</p>
+        </TotalItem>
+        <Divider></Divider>
+      </CartResultContainer>
     </Container>
   );
 };

@@ -2,11 +2,17 @@ import styled from "styled-components";
 export const Container = styled.div`
   display: flex;
   align-items: flex-start;
-  flex-direction: column;
+  flex-direction: row;
   width: 100%;
   padding: 20px 40px;
   background-color: var(--bg-primary);
   min-height: 100vh;
+  gap: 32px;
+
+  @media (max-width: 769px) {
+    flex-direction: column;
+    padding: 10px 10px;
+  }
 `;
 
 export const Backbutton = styled.button`
@@ -52,4 +58,43 @@ export const CartList = styled.ul`
   flex-direction: column;
   gap: 16px;
   margin-top: 24px;
+`;
+
+export const CartResultContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+  width: 100%;
+  width: 352px;
+  padding: 16px 20px;
+
+  h3 {
+    font-weight: 600px;
+    font-size: 20px;
+    color: var(--text-dark2);
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+`;
+
+export const TotalItem = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: 400px;
+  font-size: 16px;
+  line-height: 200%;
+  p {
+    margin-bottom: 10px;
+  }
+`;
+
+export const Divider = styled.div`
+  width: 90%;
+  height: 1px;
+  margin: 8px auto;
+  padding: 0;
+  background: var(--shapes);
 `;
